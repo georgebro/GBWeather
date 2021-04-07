@@ -1,2 +1,2 @@
 # GB_Weather
-# Weather Broadcast Android App
+# Weather Android App
