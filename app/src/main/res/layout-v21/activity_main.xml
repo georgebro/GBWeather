@@ -8,7 +8,7 @@
     tools:context=".MainActivity">
 
     <TextView
-        android:id="@+id/logo_text"
+        android:id="@+id/logo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="50sp"
@@ -22,20 +22,21 @@
         android:typeface="sans" />
 
     <EditText
-        android:id="@+id/user_field"
+        android:id="@+id/userField"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="textPersonName"
-        android:layout_below="@id/logo_text"
+        android:layout_below="@id/logo"
         android:backgroundTint="@color/material_on_primary_disabled"
         android:layout_marginTop="100sp"
         android:layout_marginHorizontal="50sp"
         android:hint="@string/input_user_hint_field"
-        android:textColorHint="@color/hint_color" />
+        android:textColorHint="@color/hint_color"
+        android:autofillHints="" />
 
     <Button
-        android:id="@+id/main_button"
+        android:id="@+id/mainButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/mainButton"
@@ -43,21 +44,21 @@
         android:layout_marginHorizontal="100sp"
         android:layout_marginTop="20sp"
         android:backgroundTint="@color/design_default_color_secondary_variant"
-        android:layout_below="@id/user_field" />
+        android:layout_below="@id/userField" />
 
     <TextView
-        android:id="@+id/result_Info"
+        android:id="@+id/resultInfo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_below="@id/mainButton"
         android:layout_marginTop="110sp"
         android:fontFamily="sans-serif-thin"
-        android:lineSpacingExtra="30sp"
-        android:text="@string/hith_text"
+        android:lineSpacingExtra="36sp"
         android:textAlignment="center"
         android:textAllCaps="true"
-        android:textColor="@color/hint_color"
+        android:textColor="@color/white"
         android:textSize="25sp"
-        android:typeface="sans"
-        android:layout_below="@id/main_button"/>
+        android:textStyle="bold"
+        android:typeface="sans" />
 
 </RelativeLayout>

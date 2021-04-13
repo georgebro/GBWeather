@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">GB Weather</string>
+    <string name="hith_text">Weather Broadcast</string>
+    <string name="input_user_hint_field">Input your city</string>
+    <string name="mainButton">Search</string>
+    <string name="no_user_input">Please Enter Your Request</string>
+
 </resources>
