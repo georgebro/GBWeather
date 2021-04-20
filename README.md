@@ -1,2 +1,2 @@
-# GBWeather Weather Android App
+# GBWeather android application
 # getting data from the openweathermap.org 
