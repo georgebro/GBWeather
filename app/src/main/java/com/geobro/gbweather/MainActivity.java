@@ -10,6 +10,9 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import org.json.JSONException;
+import org.json.JSONObject;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
@@ -44,7 +47,7 @@ public class MainActivity extends AppCompatActivity {
             else{
                 String city = user_field.getText().toString();
                 String key = "d8ec39a838bffb2aee789581572a04f8";
-                String url = "https://api.openweathermap.org/data/2.5/weather?q="+ city +
+                String url = "http://api.openweathermap.org/data/2.5/weather?q="+ city +
                              "&appid="+key+"&units=metric";
                 new GetURLData().execute(url);
             }
@@ -92,7 +95,6 @@ public class MainActivity extends AppCompatActivity {
             } catch (IOException e) {
                 e.printStackTrace();
             }
-
             finally {
                 if (connection != null)
                     connection.disconnect();
@@ -109,8 +111,13 @@ public class MainActivity extends AppCompatActivity {
         @Override
         protected void onPostExecute(String result){
             super.onPostExecute(result);
+            try {
+                JSONObject jsonObject = new JSONObject(result);
+                result_Info.setText("Temperature is:" + jsonObject.getJSONObject("main").getDouble("temp")+"deg");
 
-            result_Info.setText(result);
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
         }
     }
 }
